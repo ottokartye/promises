@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "outDir": "dist/"
+  },
+  "files": [
+    "src/any.ts",
+    "src/stream.ts",
+    "src/race-resolved.ts"
+  ]
+}
