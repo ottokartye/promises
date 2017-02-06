@@ -1,5 +1,12 @@
-import { randomPromise } from './promises';
+import { randomPromise } from './promise-generator';
 
+/**
+ * Resolves all the promises inside the passed promise array 
+ * and returns an array of values be that resolved or rejected.
+ * 
+ * @param {((Promise<any> | any)[])} promises
+ * @returns {Promise<any[]>}
+ */
 function any(promises: (Promise<any> | any)[]): Promise<any[]> {
   return new Promise(resolve => {
     const values: any[] = [];
@@ -19,10 +26,8 @@ function any(promises: (Promise<any> | any)[]): Promise<any[]> {
       }
 
       currentPromise.then(onResult, onResult);
-
     });
   });
-
 }
 
 const promise1 = randomPromise();
