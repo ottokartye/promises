@@ -1,4 +1,4 @@
-import { randomPromise } from './promises';
+import { randomPromise } from './promise-generator';
 
 /**
  * Resolve the first resolved promise.

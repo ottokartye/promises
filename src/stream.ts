@@ -1,4 +1,4 @@
-import { randomPromise } from './promises';
+import { randomPromise } from './promise-generator';
 
 /**
  * Creates an array and marks 
@@ -23,7 +23,7 @@ function initValues(max: number) {
  * @param {any} progressCallback
  * @returns {Promise<any>}
  */
-function stream(promises: (Promise<any> | any)[], progressCallback): Promise<any> {
+function stream(promises: (Promise<any> | any)[], progressCallback): Promise<any[]> {
   return new Promise(resolve => {
     const max = promises.length;
     // Mark all elements of the array as undefined
