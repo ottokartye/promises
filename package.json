@@ -4,6 +4,7 @@
   "description": "some promise functions",
   "main": "index.js",
   "dependencies": {
+    "tslint": "^4.4.2",
     "typescript": "^2.1.5"
   },
   "devDependencies": {},
