@@ -1,5 +1,23 @@
 # Promise methods
 
+### Installation
+
+To be able to start changing and testing the functions please clone the repo, 
+install the required npm packages and then transpile the files.
+
+```javascript
+git clone https://github.com/ottokartye/promises
+cd promises
+npm install
+tsc
+```
+
+You can then run the files by typing
+
+```javascript
+node dist/any.js
+```
+
 ## Description
 
 This repository contains custom methods for handling an array of promises.
