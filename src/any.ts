@@ -7,7 +7,7 @@ import { randomPromise } from './promise-generator';
  * @param {((Promise<any> | any)[])} promises
  * @returns {Promise<any[]>}
  */
-function any(promises: (Promise<any> | any)[]): Promise<any[]> {
+export function any(promises: (Promise<any> | any)[]): Promise<any[]> {
   return new Promise(resolve => {
     const values: any[] = [];
 
@@ -29,12 +29,3 @@ function any(promises: (Promise<any> | any)[]): Promise<any[]> {
     });
   });
 }
-
-const promise1 = randomPromise();
-const promise2 = randomPromise();
-const promise3 = randomPromise();
-
-any([promise1, promise2, promise3])
-  .then(values => {
-    console.log(values);
-  });
