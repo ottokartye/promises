@@ -8,15 +8,15 @@
 export function randomPromise(): Promise<any> {
   return new Promise((resolve, reject) => {
     const timeOut = setTimeout(() => {
-      let number = Math.random();
-      number = Math.round(number * 100) / 100
-      if (number > 0.2 && number < 0.8) {
-        resolve(number);
+      let myNumber = Math.random();
+      myNumber = Math.round(myNumber * 100) / 100;
+      if (myNumber > 0.2 && myNumber < 0.8) {
+        resolve(myNumber);
       } else {
         reject(false);
       }
     }, 100);
-  })
+  });
 }
 
 /**
@@ -27,12 +27,12 @@ export function randomPromise(): Promise<any> {
  * @param {boolean} [shouldResolve=true]
  * @returns {Promise<any>}
  */
-export function returnAPromise(shouldResolve: boolean = true): Promise<any> {
+export function returnAPromise(result: number | boolean = false): Promise<any> {
   return new Promise((resolve, reject) => {
-    if (shouldResolve) {
-      resolve(true);
+    if (result) {
+      resolve(result);
     } else {
-      reject(false);
+      reject(result);
     }
-  })
+  });
 }
