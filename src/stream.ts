@@ -1,5 +1,3 @@
-import { randomPromise } from './promise-generator';
-
 /**
  * Creates an array and marks 
  * each element as undefined.
@@ -8,7 +6,7 @@ import { randomPromise } from './promise-generator';
  * @returns
  */
 function initValues(max: number) {
-  let values: any[] = [];
+  const values: any[] = [];
   for (let i = 0; i < max; i++) {
     values[i] = undefined;
   }
@@ -23,11 +21,11 @@ function initValues(max: number) {
  * @param {any} progressCallback
  * @returns {Promise<any>}
  */
-function stream(promises: (Promise<any> | any)[], progressCallback): Promise<any[]> {
+export function stream(promises: (Promise<any> | any)[], progressCallback): Promise<any[]> {
   return new Promise(resolve => {
     const max = promises.length;
     // Mark all elements of the array as undefined
-    let values: any = initValues(max);
+    const values: any = initValues(max);
 
     promises.forEach((currentPromise: Promise<any> | any, index: number) => {
       const store = (value) => {
@@ -43,22 +41,3 @@ function stream(promises: (Promise<any> | any)[], progressCallback): Promise<any
     });
   });
 }
-
-const promise1 = randomPromise();
-const promise2 = randomPromise();
-const promise3 = randomPromise();
-
-/**
- * The function to be executed after 
- * each resolved/rejected promise.
- * 
- * @param {any} values
- * @param {any} index
- */
-function progress(values, index) {
-  console.log(index, ': ', values);
-};
-
-stream([promise1, promise2, promise3], progress).then(values => {
-  console.log('Final result: ', values);
-});
