@@ -15,7 +15,7 @@ export function randomPromise(): Promise<any> {
       } else {
         reject(false);
       }
-    }, 100);
+    }, 10);
   });
 }
 

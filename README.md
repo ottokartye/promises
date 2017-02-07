@@ -12,10 +12,10 @@ npm install
 tsc
 ```
 
-You can then run the files by typing
+You can then see the test results of all the methods by typing
 
 ```javascript
-node dist/any.js
+npm test
 ```
 
 ## Description
