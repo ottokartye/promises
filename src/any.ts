@@ -1,9 +1,7 @@
-import { randomPromise } from './promise-generator';
-
 /**
  * Resolves all the promises inside the passed promise array 
  * and returns an array of values be that resolved or rejected.
- * 
+ *
  * @param {((Promise<any> | any)[])} promises
  * @returns {Promise<any[]>}
  */
