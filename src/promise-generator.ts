@@ -1,7 +1,7 @@
 /**
  * Returns a promise that will randomly
  * resolve a number or reject with false.
- * 
+ *
  * @export
  * @returns {Promise<any>}
  */
@@ -22,7 +22,7 @@ export function randomPromise(): Promise<any> {
 /**
  * Returns a simple promise.
  * It will resolve if you pass true or fail if you pass false.
- * 
+ *
  * @export
  * @param {boolean} [shouldResolve=true]
  * @returns {Promise<any>}
